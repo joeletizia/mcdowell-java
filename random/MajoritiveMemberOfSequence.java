@@ -6,8 +6,9 @@ import java.util.Arrays;
 public class MajoritiveMemberOfSequence {
   public static void main(String[] args){
     int[] arr = {1,44,3,2,5,1,1,1,1,1,1,1,1};
-    System.out.println(majoritiveMemberOfSequence(arr) == 1);
     int[] arr2 = {2,3,2,2,2,2,2,2};
+
+    System.out.println(majoritiveMemberOfSequence(arr) == 1);
     System.out.println(majoritiveMemberOfSequence(arr2) == 2);
 
     System.out.println(majoritiveMemberOfSequenceNoSort(arr) == 1);
