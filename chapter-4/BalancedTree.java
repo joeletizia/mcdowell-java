@@ -11,10 +11,16 @@ public class BalancedTree {
   }
 
   private static boolean treeIsBalanced(TreeNode root){
+    if(root == null)
+      return true;
+
     int leftHeight = height(root.left);
     int rightHeight = height(root.right);
 
-    return Math.abs(leftHeight - rightHeight) <= 1;
+    if(Math.abs(leftHeight - rightHeight) > 1)
+      return false;
+
+    return treeIsBalanced(root.left) && treeIsBalanced(root.right);
   }
 
   private static int height(TreeNode root){
